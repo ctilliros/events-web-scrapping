@@ -103,7 +103,7 @@ def run():
 	        url = "https://mobile.facebook.com/events/"+k+"/"
 	        page = requests.get(url)
 	        soup = BeautifulSoup(page.content, 'html.parser')
-	    #     get_name = soup.find_all("h3", attrs={"class":"cd"})
+	  
 	        get_name = soup.find_all("title")
 	        get_type = soup.find_all("div", attrs={"class":"ce"})
 	        sql = 'insert into fb_events(event_id, event_link) values (%s,%s) returning id;'
@@ -118,13 +118,7 @@ def run():
 	                    event_date_list.append(values.text)
 	                else:
 	                    event_date_list.append("")
-	#                 sql = 'update fb_events set event_date = %s where event_id =%s;'
-	#                 cursor.execute(sql, (values.text, k,))
-	#                 conn.commit()
 	            else:
-	#                 sql = 'update fb_events set event_location = %s where event_id =%s;'
-	#                 cursor.execute(sql, (values.text, k,))
-	#                 conn.commit()
 	                if values.text:
 	                    event_location_list.append(values.text)
 	                else:
@@ -156,10 +150,7 @@ def run():
 	            cursor.execute(sql, ("", k,))
 	            conn.commit()
 	        for gtype in get_type:
-	    #         gtyp = re.sub('[^A-Za-z0-9]+', '', gtype.text)
 	            gtyp = re.sub('\W+'," ", gtype.text)
-
-	    #         gtype.text.replace(regex, '')
 	            types.append(gtyp)
 	            sql = 'update fb_events set event_type= %s where event_id =%s;'
 	            cursor.execute(sql,(gtyp,k,))                
