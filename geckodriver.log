@@ -1,0 +1,106 @@
+1598538878426	geckodriver	INFO	Listening on 127.0.0.1:60879
+1598538879440	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofileoRNHlJ"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598538883118	Marionette	INFO	Listening on port 60890
+1598538883225	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1598538888592	Marionette	INFO	Stopped listening on port 60890
+[Child 19099, MediaDecoderStateMachine #1] WARNING: Decoder=11e151c00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp, line 3470
+1598538950929	geckodriver	INFO	Listening on 127.0.0.1:60971
+1598538951946	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofileNiy0bM"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598538955219	Marionette	INFO	Listening on port 60982
+1598538955318	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1598538960718	Marionette	INFO	Stopped listening on port 60982
+1598539147246	geckodriver	INFO	Listening on 127.0.0.1:61101
+1598539148261	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofileXmCLqA"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598539152226	Marionette	INFO	Listening on port 61112
+1598539152308	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1598539156526	Marionette	INFO	Stopped listening on port 61112
+1598539159076	geckodriver	INFO	Listening on 127.0.0.1:61181
+1598539160085	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofile9AKx58"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598539164088	Marionette	INFO	Listening on port 61192
+1598539164185	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598539164835	Marionette	INFO	Stopped listening on port 61192
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+1598539166302	geckodriver	INFO	Listening on 127.0.0.1:61253
+1598539167317	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofileG1XdQi"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598539171151	Marionette	INFO	Listening on port 61264
+1598539171202	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598539173551	Marionette	INFO	Stopped listening on port 61264
+JavaScript error: https://wego.here.com/directions/mylocation/e-eyJuYW1lIjoiXHUwM2EwXHUwM2JiXHUwM2IxXHUwM2M0XHUwM2I1XHUwM2FmXHUwM2IxIFx1MDM5NVx1MDNiYVx1MDNiYVx1MDNiYlx1MDNiN1x1MDNjM1x1MDNhZlx1MDNiMVx1MDNjMiBcdTAzOTFcdTAzYjNcdTAzYWZcdTAzYjFcdTAzYzIgXHUwMzkyXHUwM2IxXHUwM2MxXHUwM2IyXHUwM2FjXHUwM2MxXHUwM2IxXHUwM2MyIC0gXHUwMzlhXHUwM2IxXHUwM2NhXHUwM2JjXHUwM2IxXHUwM2JhXHUwM2JiXHUwM2FmIiwiYWRkcmVzcyI6IiIsImxhdGl0dWRlIjozNS4xNzMzMDg0MzU1OTIsImxvbmdpdHVkZSI6MzMuMzY1ODQzMjk2MDUxLCJwcm92aWRlck5hbWUiOiJmYWNlYm9vayIsInByb3ZpZGVySWQiOjMzNzE0NzIyNTI4NzI1ODN9?map=35.173308435592,33.365843296051,15,normal&ref=facebook&link=unknown&fb_locale=el_GR, line 9: NS_ERROR_NOT_INITIALIZED: 
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+1598539176147	geckodriver	INFO	Listening on 127.0.0.1:61340
+1598539177163	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofiletbhY8a"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598539180816	Marionette	INFO	Listening on port 61351
+1598539180892	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1598539185134	Marionette	INFO	Stopped listening on port 61351
+1598539187704	geckodriver	INFO	Listening on 127.0.0.1:61422
+1598539188721	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofileCjUZgx"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598539192488	Marionette	INFO	Listening on port 61433
+1598539192558	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598539194377	Marionette	INFO	Stopped listening on port 61433
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 343))
+console.warn: services.settings: main/cfr sync interrupted by shutdown
+1598539195828	geckodriver	INFO	Listening on 127.0.0.1:61490
+1598539196841	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofileiYUJWj"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598539200283	Marionette	INFO	Listening on port 61501
+1598539200368	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598539203973	Marionette	INFO	Stopped listening on port 61501
+JavaScript error: https://wego.here.com/directions/mylocation/e-eyJuYW1lIjoiXHUwMzk0XHUwM2I3XHUwM2JjXHUwM2JmXHUwM2M0XHUwM2I5XHUwM2JhXHUwM2NjXHUwM2MyIFx1MDM5YVx1MDNhZVx1MDNjMFx1MDNiZlx1MDNjMiBcdTAzOWJcdTAzYjVcdTAzYzVcdTAzYmFcdTAzYzlcdTAzYzNcdTAzYWZcdTAzYjFcdTAzYzIiLCJhZGRyZXNzIjoiIiwibGF0aXR1ZGUiOjM1LjE3MzMwODQzNTU5MiwibG9uZ2l0dWRlIjozMy4zNjU4NDMyOTYwNTEsInByb3ZpZGVyTmFtZSI6ImZhY2Vib29rIiwicHJvdmlkZXJJZCI6MzM3MTQ5NTUzOTUzNjkyMX0=?map=35.173308435592,33.365843296051,15,normal&ref=facebook&link=unknown&fb_locale=el_GR, line 9: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5B000D,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+1598539206895	geckodriver	INFO	Listening on 127.0.0.1:61572
+1598539207908	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofilev606HM"
+*** You are running in headless mode.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598539211611	Marionette	INFO	Listening on port 61583
+1598539211661	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3in0p4/yz/l/el_GR/mBnUP4M_8ql.js?_nc_x=Ij3Wp8lg5Kz, line 19: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1598539215829	Marionette	INFO	Stopped listening on port 61583

@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import re 
+import json 
+
 
 import sys
 sys.path.insert(1, '../')
@@ -25,8 +27,11 @@ else:
 sql = 'CREATE TABLE IF NOT EXISTS fb_events (id SERIAL NOT NULL, event_id BIGINT NOT NULL, \
     event_name text COLLATE pg_catalog."default",  \
     event_type text COLLATE pg_catalog."default",  \
-    event_date text COLLATE pg_catalog."default",  \
     event_location text ,\
+    startDate text ,\
+    endDate text ,\
+    streetAddress text ,\
+    postalCode text ,\
     event_link text ,\
     latitude double precision ,\
     longitude double precision ,\
@@ -125,11 +130,11 @@ def run():
 	                    event_location_list.append("")
 	            i+=1
 	            
-	        for i in range(len(event_date_list)):
-	            if i == event_link.index(k):
-	                sql = 'update fb_events set event_date = %s where event_id =%s and id=%s;'
-	                cursor.execute(sql, (event_date_list[i], k, res))
-	                conn.commit()  
+	        # for i in range(len(event_date_list)):
+	        #     if i == event_link.index(k):
+	        #         sql = 'update fb_events set event_date = %s where event_id =%s and id=%s;'
+	        #         cursor.execute(sql, (event_date_list[i], k, res))
+	        #         conn.commit()  
 	                
 
 	        for i in range(len(event_location_list)):
@@ -149,17 +154,53 @@ def run():
 	            sql = 'update fb_events set event_name = %s where event_id =%s;'
 	            cursor.execute(sql, ("", k,))
 	            conn.commit()
+
 	        for gtype in get_type:
 	            gtyp = re.sub('\W+'," ", gtype.text)
 	            types.append(gtyp)
 	            sql = 'update fb_events set event_type= %s where event_id =%s;'
 	            cursor.execute(sql,(gtyp,k,))                
 	            conn.commit()
+
 	        driver = webdriver.Firefox(options=options)
 	        driver.get('http://facebook.com/events/'+k+'/')
 	        soup=BeautifulSoup(driver.page_source, features="html.parser")
 	        driver.close()
 
+	        streetInfo = soup.find('script', attrs={'type':'application/ld+json' })
+	        if streetInfo:
+	            for i in streetInfo.contents:
+	                info = json.loads(i)
+
+	            for key, value in info.items():
+	                try:
+	                    startDate = info['startDate']
+	                except KeyError:
+	                    startDate = ""
+
+	                try:
+	                    endDate = info['endDate']
+	                except KeyError:
+	                    endDate = ""
+
+	                try:
+	                    streetAddress = info['location']['address']['streetAddress']
+	                except KeyError:
+	                    streetAddress = ""
+
+	                try:
+	                    postalCode = info['location']['address']['postalCode']
+	                except KeyError:
+	                    postalCode = ""
+	                
+	                break
+	        else:
+	            startDate = endDate = streetAddress = postalCode = ""
+
+	        sql = 'update fb_events set startDate = %s,endDate = %s, streetAddress = %s, postalCode = %s\
+	        where event_id =%s and id=%s;'
+	        cursor.execute(sql, (startDate, endDate, streetAddress, postalCode, k, res))
+	        conn.commit()  
 	        map_url = soup.find('a', attrs={'class':'_42ft _4jy0 _4jy3 _517h _51sy'})
 	        if map_url:
 	            driver = webdriver.Firefox(options=options)
