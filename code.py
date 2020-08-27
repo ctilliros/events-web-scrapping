@@ -27,11 +27,11 @@ else:
 sql = 'CREATE TABLE IF NOT EXISTS fb_events (id SERIAL NOT NULL, event_id BIGINT NOT NULL, \
     event_name text COLLATE pg_catalog."default",  \
     event_type text COLLATE pg_catalog."default",  \
+    startdate text,  \
+    enddate text ,  \
+    streetAddress text,  \
+    postalCode text, \
     event_location text ,\
-    startDate text ,\
-    endDate text ,\
-    streetAddress text ,\
-    postalCode text ,\
     event_link text ,\
     latitude double precision ,\
     longitude double precision ,\
