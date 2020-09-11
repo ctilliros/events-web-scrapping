@@ -1,0 +1,5 @@
+psycopg2
+bs4
+selenium
+timeloop
+requests
