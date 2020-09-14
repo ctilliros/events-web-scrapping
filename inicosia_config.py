@@ -10,11 +10,5 @@
 # password_events = "9664241907"
 host = "postgres"
 user = "admin"
-postgresport = 5432
-database_airquality = "postgres"
-password_airquality = "secret"
-database_parking = "postgres"
-password_parking = "secret"
-mongoport = 27017
-database_events = "postgres"
+database_events = "inicosia"
 password_events = "secret"
