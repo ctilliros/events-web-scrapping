@@ -10,8 +10,8 @@ sys.path.insert(1, '../')
 from inicosia_config import *
 
 import psycopg2
-# conn = psycopg2.connect(host=host, database=database_events, user=user, password=password_events)
-conn = psycopg2.connect(host="localhost", options='-c statement_timeout=30s', port=5432, database="testing", user="postgres", password="9664241907")
+conn = psycopg2.connect(host=host, database=database_events, user=user, password=password_events)
+# conn = psycopg2.connect(host="localhost", options='-c statement_timeout=30s', port=5432, database="testing", user="postgres", password="9664241907")
 cursor = conn.cursor()
 
 # Create database if not exists
