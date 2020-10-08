@@ -3,6 +3,7 @@ version: '3'
 services:  
   web:
     build: "."
+    restart: always
     command: python -u code.py                
     external_links:
       - postgres
