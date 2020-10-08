@@ -11,17 +11,18 @@ from inicosia_config import *
 
 import psycopg2
 conn = psycopg2.connect(host=host, database=database_events, user=user, password=password_events)
+# conn = psycopg2.connect(host="localhost", options='-c statement_timeout=30s', port=5432, database="testing", user="postgres", password="9664241907")
 cursor = conn.cursor()
 
 # Create database if not exists
-sql ="SELECT 1 FROM pg_catalog.pg_database WHERE datname = %s ";
-cursor.execute(sql,(database_events,))
-exists = cursor.fetchone()
-if not exists:
-	sql = 'CREATE DATABASE %s;'
-	cursor.execute(sql,(database_events))
-else:
-	print("Database exists")
+# sql ="SELECT 1 FROM pg_catalog.pg_database WHERE datname = %s ";
+# cursor.execute(sql,(database_events,))
+# exists = cursor.fetchone()
+# if not exists:
+# 	sql = 'CREATE DATABASE %s;'
+# 	cursor.execute(sql,(database_events))
+# else:
+# 	print("Database exists")
 
 # Create table for facebook events if does not exists
 sql = 'CREATE TABLE IF NOT EXISTS fb_events (id SERIAL NOT NULL, event_id BIGINT NOT NULL, \
@@ -71,7 +72,7 @@ def run():
     options = Options()
     # options.add_argument('--headless')
     options.headless = True
-	### Load data from facebook page ###
+    ### Load data from facebook page ###
     import requests
     url = "https://mobile.facebook.com/pg/NicosiaMunicipality/events/"
     response = requests.get(url)
