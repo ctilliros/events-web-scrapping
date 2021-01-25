@@ -642,3 +642,22 @@ JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4
 JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
 JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
 JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+1611596479070	geckodriver	INFO	Listening on 127.0.0.1:59810
+1611596480074	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "/var/folders/_h/dbbv32vs2fs48fgbmf2wfb8h0000gn/T/rust_mozprofilet6AKp5"
+*** You are running in headless mode.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611596483189	Marionette	INFO	Listening on port 59821
+1611596483286	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611596488003	Marionette	INFO	Stopped listening on port 59821
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".
+JavaScript error: https://maps.googleapis.com/maps/api/js?key=AIzaSyC42yQSNEM_G4-F81tgVzgoeCmhJClADHc&libraries=places, line 89: Error: Could not load "marker".

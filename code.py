@@ -36,6 +36,7 @@ sql = 'CREATE TABLE IF NOT EXISTS fb_events (id SERIAL NOT NULL, event_id BIGINT
     event_link text ,\
     latitude double precision ,\
     longitude double precision ,\
+    source text, \
     UNIQUE(event_id),\
     CONSTRAINT fb_events_pkey PRIMARY KEY (id));'
 cursor.execute(sql, )
@@ -54,6 +55,7 @@ sql = 'CREATE TABLE IF NOT EXISTS eventbrite_events (id SERIAL NOT NULL, event_i
     event_link text ,\
     latitude double precision ,\
     longitude double precision ,\
+    source text, \
     UNIQUE(event_id),\
     CONSTRAINT eventbrite_events_pkey PRIMARY KEY (id));'
 cursor.execute(sql, )
@@ -139,8 +141,8 @@ def run():
       
             get_name = soup.find_all("title")
             get_type = soup.find_all("div", attrs={"class":"ce"})
-            sql = 'insert into fb_events(event_id, event_link) values (%s,%s) returning id;'
-            cursor.execute(sql,(k,"facebook.com/events/"+k+"/"))                
+            sql = 'insert into fb_events(event_id, event_link, source) values (%s,%s,%s) returning id;'
+            cursor.execute(sql,(k,"facebook.com/events/"+k+"/","Facebook"))                
             res = cursor.fetchone()[0]
             conn.commit()
 
@@ -351,9 +353,9 @@ def run():
             postalcode = find_postal_code(longitude,latitude)
             if postalcode != 0:
                 sql = 'insert into eventbrite_events (event_id,event_name,startdate,enddate,\
-                streetaddress,postalcode,event_location,event_link,latitude,longitude) \
-                values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'
-                cursor.execute(sql,(event_id,event_name,startDate,endDate,streetAddress,postalcode,event_location,event_link,latitude,longitude))
+                streetaddress,postalcode,event_location,event_link,latitude,longitude,source) \
+                values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'
+                cursor.execute(sql,(event_id,event_name,startDate,endDate,streetAddress,postalcode,event_location,event_link,latitude,longitude,"Eventbrite"))
                 conn.commit()	 
 
 if __name__ == "__main__":
