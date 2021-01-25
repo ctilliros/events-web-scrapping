@@ -60,6 +60,32 @@ cursor.execute(sql, )
 conn.commit()   
 
 
+file = 'nicosia_postcodes_with_population.json'
+with open(file,'r') as f:
+    global postalcodes 
+    postalcodes = json.load(f)     
+f.close()   
+
+    
+def find_postal_code(latitude, longitude):
+    point = (float(latitude),float(longitude))
+    #append polygons and postcodes in two different lists
+    polygons = []
+    postcodes = []
+    for i in postalcodes['features']:
+        for row, rowvalue in i.items():        
+            if row == 'properties':
+                post_code = rowvalue['post_code']
+                postcodes.append(post_code)
+            if row == 'geometry':
+                geo = rowvalue['coordinates'][0][0]
+                polygons.append(geo)                  
+    from shapely.geometry import Point, Polygon, LineString, shape
+    for j in range(0,len(polygons)):
+        if (Point(point).within(Polygon(polygons[j]))):                    
+            return postcodes[j]
+    return 0
+
 ### Next three lines do not open firefox app
 # !brew install geckodriver
 import time
@@ -236,16 +262,17 @@ def run():
                         if result:
                             lat = re.search('%s(.*)%s' % (start_lat, end_lat), result.group(1)).group(1)
                             lon = re.search('%s(.*)%s' % (start_lon, end_lon), result.group(1)).group(1)
-                            sql = 'update fb_events set latitude = %s,longitude = %s where event_id =%s;'
-                            cursor.execute(sql,(lat,lon,k,))                
+                            postalcode = find_postal_code(lat, lon)
+                            sql = 'update fb_events set latitude = %s,longitude = %s, postalcode = %s where event_id =%s;'
+                            cursor.execute(sql,(lat,lon,postalcode, k,))                
                             conn.commit()
                     latitude.append(lat)
                     longitude.append(lon)
             else:
                 latitude.append(None)
                 longitude.append(None)
-                sql = 'update fb_events set latitude = %s,longitude = %s where event_id =%s;'
-                cursor.execute(sql,(None,None,k,))                
+                sql = 'update fb_events set latitude = %s,longitude = %s, postalcode =%s where event_id =%s;'
+                cursor.execute(sql,(None,None,None,k,))                
                 conn.commit()
 
 
@@ -296,10 +323,10 @@ def run():
         except KeyError:
             streetAddress = None
         
-        try:
-            postalCode = result['jsonld'][0][i]['location']['address']['postalCode']
-        except KeyError:
-            postalCode = None
+        # try:
+        #     postalCode = result['jsonld'][0][i]['location']['address']['postalCode']
+        # except KeyError:
+        #     postalCode = None
 
         try:
             event_location = result['jsonld'][0][i]['location']['name']
@@ -320,12 +347,14 @@ def run():
         row = cursor.fetchall()
         if row:
             continue
-        else:    	
-            sql = 'insert into eventbrite_events (event_id,event_name,startdate,enddate,\
-            streetaddress,postalcode,event_location,event_link,latitude,longitude) \
-            values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'
-            cursor.execute(sql,(event_id,event_name,startDate,endDate,streetAddress,postalCode,event_location,event_link,latitude,longitude))
-            conn.commit()	 
+        else:    	            
+            postalcode = find_postal_code(longitude,latitude)
+            if postalcode != 0:
+                sql = 'insert into eventbrite_events (event_id,event_name,startdate,enddate,\
+                streetaddress,postalcode,event_location,event_link,latitude,longitude) \
+                values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'
+                cursor.execute(sql,(event_id,event_name,startDate,endDate,streetAddress,postalcode,event_location,event_link,latitude,longitude))
+                conn.commit()	 
 
 if __name__ == "__main__":
     tl.start(block=True)
